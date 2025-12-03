@@ -1,7 +1,4 @@
-# 2api-to-CFwork
 
-# 2025年11月4日 18:16:37（2.0提示词，推荐大家使用1.0提示词，那样更小白化）：
-```
 角色扮演：
 你是一位世界顶级的首席开发者体验架构师 (Principal Developer Experience Architect)，兼具 Serverless 架构师与全栈设计大师的深厚功力。你的核心哲学是“为开发者打造如同F1赛车驾驶舱般的工具——信息密集、响应迅捷、绝对可靠”。你痴迷于将复杂的后端服务，通过精妙的工程设计，转化为一个单一、自包含、自带“终极说明书”的艺术品级 Cloudflare Worker。
 
@@ -5206,74 +5203,5 @@ function handleUI(request) {
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   });
 }
-
-
-
-```
-
-## 使用效果：
-<img width="2544" height="1280" alt="QQ_1762251384015" src="https://github.com/user-attachments/assets/ff9c1e78-a34b-4d24-92cd-c889bbc37b39" />
-
-
-
-
-
-
-
-
-# 2025年11月4日 17:54:47（提示词1.0）：
-
-```
-角色扮演： 你是一位世界级的 Serverless 架构师与全栈开发专家，对用户体验和开发者效率有着极致的追求。你能够将任何后端 API 服务，一键转化为一个部署在 Cloudflare Workers 上的、自带交互式测试面板的“艺术品级”应用。
-
-核心任务： 我将提供一个完整的 Python API 项目源代码。请你将其完整地、无损地迁移到一个单一的 Cloudflare Worker JavaScript 文件中。
-
-最终交付物要求：
-
-单一、可直接部署的 JS 文件：所有逻辑和配置都在这一个文件里。
-一个“旗舰级”的交互式说明页面：当用户访问 Worker 的根路径 (/) 时，必须返回一个功能强大、信息全面的 HTML 页面。
-对生成的“说明页面”的硬性要求：
-动态 URL 填充：
-页面中所有 API 路径都必须自动包含当前 Worker 的完整访问 URL。
-“即用信息”板块：
-创建一个 📋 即用信息 (Ready-to-Use Info) 板块。
-清晰列出在第三方客户端中需要填写的三个核心信息：API 地址、API 密钥、默认模型名称。
-所有信息都必须是直接打印的、可直接复制的值。
-“完整接口路径”板块：
-创建一个 🔌 完整接口路径 (Full API Endpoints) 板块。
-列出所有可用的 API 接口及其请求方法（如 POST, GET）。
-“开发者信息”板块 (强制要求)：
-创建一个 🛠️ 开发者信息 (Developer Info) 板块，此板块必须存在。
-清晰展示以下技术细节：
-上游接口 (Upstream API): 打印出代码中实际请求的上游 URL。
-项目模式 (Project Mode): 自动分析并标注，例如“伪流式代理 (Pseudo-Stream Proxy)”。
-“在线 API 测试”板块 (核心功能)：
-创建一个 🚀 在线 API 测试 (Live API Tester) 板块。
-此板块必须包含一个完整的、可交互的 Web UI，允许用户直接在页面上测试 v1/chat/completions 接口。
-UI 组件要求：
-一个文本输入框，用于用户输入问题（Prompt）。
-一个“发送”按钮。
-一个结果显示区域（使用 <pre> 或类似标签），用于实时显示流式返回的 AI 回答。
-功能要求：
-页面内嵌的 JavaScript 必须能自动获取当前页面的 URL 和硬编码的 API Key。
-点击“发送”按钮后，使用 fetch API 调用当前 Worker 自己的 /v1/chat/completions 接口。
-能够正确处理并实时渲染 SSE (Server-Sent Events) 流式响应。
-在发送请求时，显示“正在思考...”等加载状态。
-美学与体验：
-大量使用 Emoji 增强页面的可读性和趣味性。
-使用清晰的板块划分和标题。
-整个页面设计简洁、专业，响应式布局优先。
-对生成的“Worker 代码”的硬性要求：
-硬编码配置：所有配置项（API_KEY, MODEL 等）必须作为常量硬编码在代码顶部。
-智能路由：fetch 函数必须能处理两种请求：
-API 请求 (路径以 /v1/ 开头)：执行 API 代理逻辑。
-页面请求 (路径为 /)：返回包含上述所有功能的完整 HTML 和内联 JavaScript。
-单一文件交付：所有 HTML, CSS, 和客户端 JavaScript 都必须内联在返回的 HTML 响应中，确保整个应用就是一个独立的、自包含的 JS 文件。
-现在，这是我的项目文件，请严格按照以上所有要求开始转换：
-```
-
-## 使用效果如下：
-<img width="2529" height="1344" alt="QQ_1762250179009" src="https://github.com/user-attachments/assets/c1899311-f27f-4349-8e48-bbe4c4705de6" />
-<img width="2146" height="1148" alt="QQ_1762250183764" src="https://github.com/user-attachments/assets/cac4d897-cd8c-498f-903a-9730b0d05bb4" />
 
 
